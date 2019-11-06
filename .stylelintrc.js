@@ -1,9 +1,9 @@
-module.exports= {
-  extends: "stylelint-config-standard",
+module.exports = {
+  extends: 'stylelint-config-standard',
   plugins: [
-      "stylelint-scss"
+    'stylelint-scss',
   ],
   rules: {
-      "at-rule-empty-line-before": null,
-  }
+    'at-rule-empty-line-before': null,
+  },
 };

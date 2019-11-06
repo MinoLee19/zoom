@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:vue/recommended',
-    '@vue/airbnb'
+    '@vue/airbnb',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
