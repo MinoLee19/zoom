@@ -1,0 +1,175 @@
+@import "../../assets/scss/define";
+
+.RegAndLog {
+  width: 980px;
+  min-height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 120px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  margin-top: -250px;
+  margin-right: -490px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Picture {
+  width: 50%;
+  min-height: 500px;
+  background: $color-theme-5;
+  float: left;
+  position: relative;
+
+  .Circle,
+  .Flowers,
+  .FlyStars {
+    position: absolute;
+
+    span {
+      position: absolute;
+      display: block;
+    }
+  }
+
+  .Flowers {
+    .Flower {
+      background: url("../../assets/images/flower.svg") no-repeat center;
+      background-size: 100% 100%;
+      transition: all 1s linear;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+
+      &:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        top: 50px;
+        left: 30px;
+      }
+
+      &:nth-child(2) {
+        width: 22px;
+        height: 22px;
+        left: 360px;
+        top: 80px;
+      }
+
+      &:nth-child(3) {
+        width: 16px;
+        height: 16px;
+        top: 400px;
+        left: 80px;
+      }
+
+      &:nth-child(4) {
+        width: 22px;
+        height: 22px;
+        top: 240px;
+        left: 60px;
+      }
+
+      &:nth-child(5) {
+        width: 16px;
+        height: 16px;
+        top: 20px;
+        left: 200px;
+      }
+
+      &:nth-child(6) {
+        width: 16px;
+        height: 16px;
+        top: 460px;
+        left: 410px;
+      }
+
+      &:nth-child(7) {
+        width: 30px;
+        height: 30px;
+        top: 250px;
+        left: 350px;
+      }
+    }
+  }
+
+  .Circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, $color-theme-2, $color-theme-1);
+    top: 70px;
+    left: 50%;
+    margin-left: -100px;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+
+    .Leaf {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background: url("../../assets/images/leaf.svg") no-repeat center;
+      background-size: 100% 100%;
+
+      &:nth-child(2) {
+        bottom: -10px;
+        right: -4px;
+        transform: rotate(-120deg);
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px $color-theme-6;
+      transform: rotate(90deg);
+    }
+  }
+
+  .FlyStars {
+    .FlyStar {
+      width: 90px;
+      height: 3px;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0));
+      background: -o-linear-gradient(left, rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0));
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0));
+      transform: rotate(-45deg);
+
+      &:nth-child(1) {
+        top: 60px;
+        left: 80px;
+      }
+
+      &:nth-child(2) {
+        top: 210px;
+        left: 332px;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:hover > .FlyStars > .FlyStar {
+    transition: all 1s linear;
+    opacity: 0;
+
+    &:nth-child(1) {
+      top: 100px;
+      left: 40px;
+    }
+
+    &:nth-child(2) {
+      top: 250px;
+      left: 292px;
+    }
+  }
+
+  p {
+    font-family: $font-special-1;
+    padding-left: 40px;
+    text-align: center;
+    color: $color-theme-2;
+    font-weight: 600;
+    margin-top: 365px;
+    font-size: 25px;
+    letter-spacing: 40px;
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../assets/scss/define";
+
+.Hint {
+  font-family: $font-special-2;
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 20px;
+  color: $font-color-1;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  z-index: 999;
+}
+
+//.hintShow {
+//  animation: hintShow 2s forwards ease-in-out;
+//}
+
+//@keyframes hintShow {
+//  0% {
+//    top: -70px;
+//    opacity: 0;
+//  }
+//
+//  50% {
+//    top: 0;
+//    opacity: 1;
+//  }
+//
+//  100% {
+//    opacity: 0;
+//  }
+//}
+
+.Login,
+.Reg {
+  width: 50%;
+  height: 100%;
+  min-height: 500px;
+  background: $color-theme-2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .Title {
+    width: 90px;
+    height: 35px;
+    margin: 40px auto;
+    color: $font-color-1;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    font-family: $font-special-1;
+  }
+
+  .Main {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    label {
+      flex: auto;
+      margin-right: 10px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    span {
+      font-size: $font-size-small;
+      width: 130px;
+    }
+  }
+
+  .submitError {
+    line-height: 40px;
+    color: $color-error;
+  }
+
+  .OperatorPlace {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn:last-child {
+      border: none;
+    }
+  }
+}

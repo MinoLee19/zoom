@@ -5,11 +5,15 @@
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import "App";
+
+  @font-face {
+    font-family: 'neo';
+    src: url("./assets/fonts/NEOTERICc.ttf");
+  }
+
+  @font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url("./assets/fonts/ZCOOLKuaiLe-Regular.ttf");
+  }
 </style>

@@ -1,0 +1,195 @@
+@import "assets/scss/define";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: $font-normal;
+  background: linear-gradient(45deg, $color-theme-3, $color-theme-4);
+  height: 100%;
+}
+
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+/* 设置input的通用样式 */
+
+input {
+  height: 40px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid $color-theme-6;
+  color: $font-color-1;
+}
+
+input::-moz-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+  font-size: $font-size-small;
+}
+
+input::-webkit-input-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+  font-size: $font-size-small;
+}
+
+input::-ms-input-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+  font-size: $font-size-small;
+}
+
+textarea::-moz-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+}
+
+textarea::-webkit-input-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+}
+
+textarea::-ms-input-placeholder {
+  color: $font-color-2;
+  font: $font-normal;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px $color-theme-2 inset !important;
+  -webkit-text-fill-color: $color-theme-6 !important;
+}
+
+/* 设置a标签的通用样式 */
+
+a,
+a:hover {
+  text-decoration: none;
+  color: $font-color-1;
+}
+
+// 简单按钮
+.btn {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid $color-theme-6;
+  background: none;
+  color: $font-color-1;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  font-size: $font-size-normal;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+//气泡按钮
+
+.btn.btn-bubble {
+  background-color: $color-theme-2;
+  background-repeat: no-repeat;
+}
+
+.btn-bubble:hover,
+.btn-bubble:focus {
+  -webkit-animation: bubbles 1s forwards ease-out;
+  animation: bubbles 1s forwards ease-out;
+  background: $color-theme-1 radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eef 60%, #eef 65%, rgba(0, 0, 0, 0) 70%) no-repeat 90% 23% 15% 42% 102% 12% 69% 32% 84% 40%;
+}
+
+@-webkit-keyframes bubbles {
+  100% {
+    background-position: 92% -220%, 31% -185%, 24% 6%, 16% -328%, 39% -366%, 110% -375%, 5% -60%, 59% -365%, 41% -363%, 82% -8%, 37% -224%;
+    box-shadow: inset 0 -6.5em 0 $color-theme-4;
+  }
+}
+
+@keyframes bubbles {
+  100% {
+    background-position: 92% -220%, 31% -185%, 24% 6%, 16% -328%, 39% -366%, 110% -375%, 5% -60%, 59% -365%, 41% -363%, 82% -8%, 37% -224%;
+    box-shadow: inset 0 -6.5em 0 $color-theme-4;
+  }
+}
+
+//线条按钮
+.btn-line {
+  border: none;
+  position: relative;
+  transition: 800ms ease all;
+}
+
+.btn-line:hover {
+  color: $color-theme-1;
+  background: $color-theme-6;
+}
+
+.btn-line::before,
+.btn-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: $color-theme-3;
+  transition: 400ms ease all;
+}
+
+.btn-line::after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-line:hover::before,
+.btn-line:hover::after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* 字体颜色 */
+
+.tipGreen {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  background: url("assets/images/correct.svg") no-repeat left center;
+  background-size: 20px 20px;
+  color: $color-correct;
+}
+
+.tipRed {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  background: url("assets/images/error.svg") no-repeat left center;
+  background-size: 20px 20px;
+  color: $color-error;
+}
